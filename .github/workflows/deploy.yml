@@ -51,6 +51,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.NCP_SERVER_RSA_PRIVATE_KEY }}
           script: |
+            # PATH 추가
+            export PATH=$PATH:/usr/local/bin
             # 배포 디렉토리로 이동
             npm install -g pnpm
             npm install -g pm2
